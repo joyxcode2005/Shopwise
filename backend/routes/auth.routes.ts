@@ -22,6 +22,11 @@ router.post("/signup", (req: Request, res: Response) => {
       });
     }
 
+    // Destructure the data
+    const { email, password, name } = data;
+
+    // Check if user already exists
+
     return res.status(200).json({
       success: true,
       message: "Singup Successfull!!!",
